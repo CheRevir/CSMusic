@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "CSMusic"
 include(":app")
- 
+include(":core:base")
