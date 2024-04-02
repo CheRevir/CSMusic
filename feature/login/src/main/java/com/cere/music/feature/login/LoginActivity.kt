@@ -1,6 +1,7 @@
 package com.cere.music.feature.login
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -14,7 +15,7 @@ import com.cere.music.core.base.BaseActivity
 import com.cere.music.feature.login.databinding.ActivityLoginBinding
 import com.google.android.material.snackbar.Snackbar
 
-class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login) {
+class LoginActivity : BaseActivity<ActivityLoginBinding>() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
 
@@ -32,8 +33,8 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
         }
     }
 
-    override fun onViewBinding(content: View): ActivityLoginBinding {
-        return ActivityLoginBinding.bind(content)
+    override fun onViewBinding(inflater: LayoutInflater): ActivityLoginBinding {
+        return ActivityLoginBinding.inflate(inflater)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
